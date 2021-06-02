@@ -7,8 +7,8 @@ import (
 	"math/big"
 	"testing"
 
-	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	"github.com/ChainSafe/chainbridge-utils/msg"
+	utils "github.com/PolkaFoundry/ChainBridge/shared/ethereum"
+	"github.com/PolkaFoundry/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 	"github.com/ethereum/go-ethereum/common"
 )

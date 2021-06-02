@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	ethtest "github.com/ChainSafe/ChainBridge/shared/ethereum/testing"
-	"github.com/ChainSafe/chainbridge-utils/core"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
-	"github.com/ChainSafe/chainbridge-utils/msg"
+	ethtest "github.com/PolkaFoundry/ChainBridge/shared/ethereum/testing"
+	"github.com/PolkaFoundry/chainbridge-utils/core"
+	"github.com/PolkaFoundry/chainbridge-utils/keystore"
+	"github.com/PolkaFoundry/chainbridge-utils/msg"
 	"github.com/ethereum/go-ethereum/common"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 )

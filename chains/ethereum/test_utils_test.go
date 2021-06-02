@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ChainSafe/ChainBridge/bindings/Bridge"
-	connection "github.com/ChainSafe/ChainBridge/connections/ethereum"
-	utils "github.com/ChainSafe/ChainBridge/shared/ethereum"
-	"github.com/ChainSafe/chainbridge-utils/keystore"
-	"github.com/ChainSafe/chainbridge-utils/msg"
+	"github.com/PolkaFoundry/ChainBridge/bindings/Bridge"
+	connection "github.com/PolkaFoundry/ChainBridge/connections/ethereum"
+	utils "github.com/PolkaFoundry/ChainBridge/shared/ethereum"
+	"github.com/PolkaFoundry/chainbridge-utils/keystore"
+	"github.com/PolkaFoundry/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 	"github.com/ethereum/go-ethereum/common"
 )
