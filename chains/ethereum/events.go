@@ -6,6 +6,7 @@ package ethereum
 import (
 	"github.com/PolkaFoundry/chainbridge-utils/msg"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	"golang.org/x/crypto/blake2b"
 )
 
 func (l *listener) handleErc20DepositedEvent(destId msg.ChainId, nonce msg.Nonce) (msg.Message, error) {
@@ -16,6 +17,10 @@ func (l *listener) handleErc20DepositedEvent(destId msg.ChainId, nonce msg.Nonce
 		l.log.Error("Error Unpacking ERC20 Deposit Record", "err", err)
 		return msg.Message{}, err
 	}
+	// TODO bring to go-substrate-rpc-client
+	b := record.DestinationRecipientAddress[:]
+    m := append([]byte("evm:")[:], b...)
+    h := blake2b.Sum256(m)
 
 	return msg.NewFungibleTransfer(
 		l.cfg.id,
@@ -23,7 +28,7 @@ func (l *listener) handleErc20DepositedEvent(destId msg.ChainId, nonce msg.Nonce
 		nonce,
 		record.Amount,
 		record.ResourceID,
-		record.DestinationRecipientAddress,
+		h[:],
 	), nil
 }
 

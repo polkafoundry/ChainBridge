@@ -34,7 +34,7 @@ import (
 	"github.com/PolkaFoundry/chainbridge-utils/core"
 	"github.com/PolkaFoundry/chainbridge-utils/crypto/secp256k1"
 	"github.com/PolkaFoundry/chainbridge-utils/keystore"
-	metrics "github.com/ChainSafe/chainbridge-utils/metrics/types"
+	metrics "github.com/PolkaFoundry/chainbridge-utils/metrics/types"
 	"github.com/PolkaFoundry/chainbridge-utils/msg"
 	"github.com/ChainSafe/log15"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
